@@ -21,3 +21,8 @@ fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait en2pt.fs
 echo "Criado transdutor de pt para en"
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms pt2en.txt | fstarcsort > pt2en.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait pt2en.fst | dot -Tpdf  > pt2en.pdf
+
+########## dia numeral para texto ##########
+echo "Criado transdutor de dia numeral para texto"
+fstcompile --isymbols=palavras.syms --osymbols=palavras.syms dia.txt | fstarcsort > dia.fst
+fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait dia.fst | dot -Tpdf  > dia.pdf
