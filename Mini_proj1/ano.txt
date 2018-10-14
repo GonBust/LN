@@ -1,0 +1,44 @@
+0   1   2   dois
+
+1   2   0   mil
+
+2   3   0   eps
+2   4   eps e
+
+3   7   eps e
+3   8   0   eps
+
+4   5   1   eps
+4   6   2   vinte
+4   6   3   trinta
+4   6   4   quarenta
+4   6   5   cinquenta
+4   6   6   sessenta
+4   6   7   setenta
+4   6   8   oitenta
+4   6   9   noventa
+
+5   8   0   dez
+5   8   1   onze
+5   8   2   doze
+5   8   3   treze
+5   8   4   catorze
+5   8   5   quinze
+5   8   6   dezasseis
+5   8   7   dezassete
+5   8   8   dezoito
+5   8   9   dezanove
+
+6   7   eps e
+6   8   0   eps
+
+7   8   1   um
+7   8   2   dois
+7   8   3   tres
+7   8   4   quatro
+7   8   5   cinco
+7   8   6   seis
+7   8   7   sete
+7   8   8   oito
+7   8   9   nove
+8

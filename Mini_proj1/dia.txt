@@ -8,7 +8,9 @@
 0   3   2   eps
 0   4   3   eps
 0   10  0   eps
+
 1   12  /   de
+
 2   7   0   dez
 2   7   1   onze
 2   7   2   doze
@@ -20,13 +22,19 @@
 2   7   8   dezoito
 2   7   9   dezanove
 2   8   /   um
+
 3   8   /   dois
 3   5   eps vinte
+
 4   8   /   tres
 4   6   eps trinta
+
 5   9   0   eps
 5   10  eps e
+
 6   9   0   eps
+6   10  eps e
+
 10  11  1   um
 10  11  2   dois
 10  11  3   tres
@@ -36,6 +44,7 @@
 10  11  7   sete
 10  11  8   oito
 10  11  9   nove
+
 7   12  /   de
 8   12  eps de
 9   12  /   de

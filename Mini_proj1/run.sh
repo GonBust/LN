@@ -31,3 +31,8 @@ fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait dia.fst 
 echo "Criado transdutor de mes numeral para texto"
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms mes.txt | fstarcsort > mes.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait mes.fst | dot -Tpdf  > mes.pdf
+
+########## ano numeral para texto ##########
+echo "Criado transdutor de ano numeral para texto"
+fstcompile --isymbols=palavras.syms --osymbols=palavras.syms ano.txt | fstarcsort > ano.fst
+fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait ano.fst | dot -Tpdf  > ano.pdf
