@@ -65,6 +65,9 @@ fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait data2tex
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 82050_misto.txt | fstarcsort > 82050_misto.fst
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 82050_pt.txt | fstarcsort > 82050_pt.fst
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 82050_numerico.txt | fstarcsort > 82050_numerico.fst
+fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 89378_misto.txt | fstarcsort > 89378_misto.fst
+fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 89378_pt.txt | fstarcsort > 89378_pt.fst
+fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 89378_numerico.txt | fstarcsort > 89378_numerico.fst
 
 
 ################### Testa os tradutores ################
@@ -92,3 +95,28 @@ fstcompose 82050_misto.fst data2texto.fst > 82050_data2texto.fst
 echo -n "18/FEV/2013 em texto usando o data2texto é: "
 echo " "
 fstproject --project_output 82050_data2texto.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
+
+fstcompose 89378_misto.fst misto2numerico.fst > 89378_misto2numerico.fst
+echo -n "12/AGO/2013 em numerico é: "
+echo " "
+fstproject --project_output 89378_misto2numerico.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
+
+fstcompose 89378_pt.fst pt2en.fst > 89378_pt2en.fst
+echo -n "12/AGO/2013 em ingles é: "
+echo " "
+fstproject --project_output 89378_pt2en.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
+
+fstcompose 89378_numerico.fst numerico2texto.fst > 89378_numerico2texto.fst
+echo -n "12/8/2013 em texto é: "
+echo " "
+fstproject --project_output 89378_numerico2texto.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
+
+fstcompose 89378_misto.fst misto2texto.fst > 89378_misto2texto.fst
+echo -n "12/AGO/2013 em texto é: "
+echo " "
+fstproject --project_output 89378_misto2texto.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
+
+fstcompose 89378_misto.fst data2texto.fst > 89378_data2texto.fst
+echo -n "12/AGO/2013 em texto usando o data2texto é: "
+echo " "
+fstproject --project_output 89378_data2texto.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
