@@ -36,3 +36,19 @@ fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait mes.fst 
 echo "Criado transdutor de ano numeral para texto"
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms ano.txt | fstarcsort > ano.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait ano.fst | dot -Tpdf  > ano.pdf
+
+########## data numeral para texto ##########
+echo "Criado transdutor de data numeral para texto"
+fstarcsort -sort_type=olabel dia.fst > dia2.fst
+fstarcsort -sort_type=ilabel mes.fst > mes2.fst
+fstarcsort -sort_type=ilabel ano.fst > ano2.fst
+fstconcat dia2.fst mes2.fst > diames.fst
+fstconcat diames.fst ano2.fst > numerico2texto.fst
+fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait numerico2texto.fst | dot -Tpdf  > numerico2texto.pdf
+
+########## DD/MMM/AAAA para texto ##########
+echo "Criado transdutor de data mista(DD/MMM/AAAA) para texto"
+fstarcsort -sort_type=olabel misto2numerico.fst > misto2numerico2.fst
+fstarcsort -sort_type=ilabel numerico2texto.fst > numerico2texto2.fst
+fstcompose misto2numerico2.fst numerico2texto2.fst > misto2texto.fst
+fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait misto2texto.fst | dot -Tpdf  > misto2texto.pdf
