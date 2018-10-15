@@ -73,27 +73,27 @@ fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 89378_numerico.txt 
 
 ################### Testa os tradutores ################
 fstcompose 82050_misto.fst misto2numerico.fst > 82050_misto2numerico.fst
-echo -n "18/FEV/2013 em numerico é: "
+echo -n "1/FEV/2013 em numerico é: "
 echo " "
 fstproject --project_output 82050_misto2numerico.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
 
 fstcompose 82050_pt.fst pt2en.fst > 82050_pt2en.fst
-echo -n "18/FEV/2013 em ingles é: "
+echo -n "1/FEV/2013 em ingles é: "
 echo " "
 fstproject --project_output 82050_pt2en.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
 
 fstcompose 82050_numerico.fst numerico2texto.fst > 82050_numerico2texto.fst
-echo -n "18/02/2013 em texto é: "
+echo -n "1/02/2013 em texto é: "
 echo " "
 fstproject --project_output 82050_numerico2texto.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
 
 fstcompose 82050_misto.fst misto2texto.fst > 82050_misto2texto.fst
-echo -n "18/FEV/2013 em texto é: "
+echo -n "1/FEV/2013 em texto é: "
 echo " "
 fstproject --project_output 82050_misto2texto.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
 
 fstcompose 82050_misto.fst data2texto.fst > 82050_data2texto.fst
-echo -n "18/FEV/2013 em texto usando o data2texto é: "
+echo -n "1/02/2013 em texto usando o data2texto é: "
 echo " "
 fstproject --project_output 82050_data2texto.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
 
@@ -118,6 +118,6 @@ echo " "
 fstproject --project_output 89378_misto2texto.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
 
 fstcompose 89378_misto.fst data2texto.fst > 89378_data2texto.fst
-echo -n "12/AGO/2013 em texto usando o data2texto é: "
+echo -n "12/08/2013 em texto usando o data2texto é: "
 echo " "
 fstproject --project_output 89378_data2texto.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
