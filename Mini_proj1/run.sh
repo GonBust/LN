@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rm -f *.fst
+rm -f *.pdf
 
 ######## MMM para MM #########
 #echo "Criado transdutor de MMM para MM"
