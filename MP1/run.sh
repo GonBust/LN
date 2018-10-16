@@ -4,23 +4,43 @@ rm -f *.fst
 rm -f *.pdf
 
 ######## MMM para MM #########
-#echo "Criado transdutor de MMM para MM"
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms mmm2mm.txt | fstarcsort > mmm2mm.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait mmm2mm.fst | dot -Tpdf  > mmm2mm.pdf
 
-######## Data mista para data numerica #########
-#echo "Criado transdutor de DD/MMM/AAAA para DD/MM/AAAA"
-fstcompile --isymbols=palavras.syms --osymbols=palavras.syms misto2numerico.txt | fstarcsort > misto2numerico.fst
+######## Barra para barra #########
+fstcompile --isymbols=palavras.syms --osymbols=palavras.syms barra2barra.txt | fstarcsort > barra2barra.fst
+fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait barra2barra.fst | dot -Tpdf  > barra2barra.pdf
+
+######## Numero para Numero #########
+fstcompile --isymbols=palavras.syms --osymbols=palavras.syms num2num.txt | fstarcsort > num2num.fst
+fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait num2num.fst | dot -Tpdf  > num2num.pdf
+
+######## Data mista para numerica #########
+fstconcat num2num.fst barra2barra.fst > numbarra.fst
+fstconcat numbarra.fst mmm2mm.fst > numbarramm.fst
+fstconcat numbarramm.fst barra2barra.fst > numbarrammbarra.fst
+fstconcat numbarrammbarra.fst num2num.fst > misto2numerico.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait misto2numerico.fst | dot -Tpdf  > misto2numerico.pdf
 
-########## Tradutor Ingles para Portugues ##########
-#echo "Criado transdutor de en para pt"
-fstcompile --isymbols=palavras.syms --osymbols=palavras.syms en2pt.txt | fstarcsort > en2pt.fst
+######## Ingles para portugues aux #########
+fstcompile --isymbols=palavras.syms --osymbols=palavras.syms en2ptaux.txt | fstarcsort > en2ptaux.fst
+fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait en2ptaux.fst | dot -Tpdf  > en2ptaux.pdf
+
+######## Portugues para Ingles aux#########
+fstinvert en2ptaux.fst > pt2enaux.fst
+
+####### Ingles para portugues #########
+fstconcat num2num.fst barra2barra.fst > numbarra.fst
+fstconcat numbarra.fst en2ptaux.fst > numbarraen2ptaux.fst
+fstconcat numbarraen2ptaux.fst barra2barra.fst > numbarraen2ptauxbarra.fst
+fstconcat numbarraen2ptauxbarra.fst num2num.fst > en2pt.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait en2pt.fst | dot -Tpdf  > en2pt.pdf
 
-########## Tradutor Portuges para Ingles ##########
-#echo "Criado transdutor de pt para en"
-fstcompile --isymbols=palavras.syms --osymbols=palavras.syms pt2en.txt | fstarcsort > pt2en.fst
+####### Portugues para ingles #########
+fstconcat num2num.fst barra2barra.fst > numbarra.fst
+fstconcat numbarra.fst pt2enaux.fst > numbarrapt2enaux.fst
+fstconcat numbarrapt2enaux.fst barra2barra.fst > numbarrapt2enauxbarra.fst
+fstconcat numbarrapt2enauxbarra.fst num2num.fst > pt2en.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait pt2en.fst | dot -Tpdf  > pt2en.pdf
 
 ########## Dia numeral para texto ##########
@@ -38,13 +58,16 @@ fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait mes.fst 
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms ano.txt | fstarcsort > ano.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait ano.fst | dot -Tpdf  > ano.pdf
 
+######## Barra para de #########
+fstcompile --isymbols=palavras.syms --osymbols=palavras.syms barra2de.txt | fstarcsort > barra2de.fst
+fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait barra2de.fst | dot -Tpdf  > barra2de.pdf
+
 ########## Data numeral para texto ##########
 #echo "Criado transdutor de data numeral para texto"
-fstarcsort -sort_type=olabel dia.fst > dia2.fst
-fstarcsort -sort_type=ilabel mes.fst > mes2.fst
-fstarcsort -sort_type=ilabel ano.fst > ano2.fst
-fstconcat dia2.fst mes2.fst > diames.fst
-fstconcat diames.fst ano2.fst > numerico2texto.fst
+fstconcat dia.fst barra2de.fst > diade.fst
+fstconcat diade.fst mes.fst > diademes.fst
+fstconcat diademes.fst barra2de.fst > diademesde.fst
+fstconcat diademesde.fst ano.fst > numerico2texto.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait numerico2texto.fst | dot -Tpdf  > numerico2texto.pdf
 
 ########## Mista para texto ##########
@@ -60,7 +83,6 @@ fstarcsort -sort_type=olabel misto2texto.fst > misto2texto2.fst
 fstarcsort -sort_type=ilabel numerico2texto.fst > numerico2texto2.fst
 fstunion misto2texto2.fst numerico2texto2.fst > data2texto.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait data2texto.fst | dot -Tpdf  > data2texto.pdf
-
 
 ########## Criacao dos fst de teste ##########
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 82050_misto.txt | fstarcsort > 82050_misto.fst
