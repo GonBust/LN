@@ -84,11 +84,6 @@ fstarcsort -sort_type=ilabel numerico2texto.fst > numerico2texto2.fst
 fstunion misto2texto2.fst numerico2texto2.fst > data2texto.fst
 fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait data2texto.fst | dot -Tpdf  > data2texto.pdf
 
-#teste"
-#echo "11 pra onze"
-fstcompile --isymbols=palavras.syms --osymbols=palavras.syms teste.txt | fstarcsort > teste.fst
-fstdraw    --isymbols=palavras.syms --osymbols=palavras.syms --portrait teste.fst | dot -Tpdf  > teste.pdf
-
 ########## Criacao dos fst de teste ##########
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 82050_misto.txt | fstarcsort > 82050_misto.fst
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 82050_pt.txt | fstarcsort > 82050_pt.fst
@@ -97,14 +92,7 @@ fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 89378_misto.txt | f
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 89378_pt.txt | fstarcsort > 89378_pt.fst
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms 89378_numerico.txt | fstarcsort > 89378_numerico.fst
 
-fstcompile --isymbols=palavras.syms --osymbols=palavras.syms tInput.txt | fstarcsort > tInput.fst
-
 ################### Testa os tradutores ################
-fstcompose tInput.fst teste.fst > testef.fst
-echo -n "1 pra um da:"
-echo " "
-fstproject --project_output testef.fst | fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=palavras.syms | awk '{print $3}'
-
 fstcompose 82050_misto.fst misto2numerico.fst > 82050_misto2numerico.fst
 echo -n "18/FEV/2013 em numerico é: "
 echo " "
