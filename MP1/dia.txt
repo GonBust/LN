@@ -12,6 +12,12 @@
 0	2	1	eps
 0	3	2 	vinte
 0	3	3 	trinta
+0   3   4   quarenta
+0   3   5   cinquenta
+0   3   6   sessenta
+0   3   7   setenta
+0   3   8   oitenta
+0   3   9   noventa
 
 2	1	0	dez
 2	1	1	onze
@@ -25,5 +31,6 @@
 2	1	9	dezanove
 
 3	0	eps e
-
+3   3   0   eps
+3
 1
