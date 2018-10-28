@@ -26,7 +26,7 @@ def read_ref(file):
 #---------------
 # Lê as Questoes e associa tag
 #----------------
-def InOut(file):
+def tagSet(file):
 	myset = []
 	for line in file:
 		myset.append('actor_name')
@@ -34,17 +34,29 @@ def InOut(file):
 	print('\n')
 	return set(myset)
 
+#----------------------
+# Lê as questões e escreve as tags no ficheiro
+#----------------------
+def tagWrite(file,tagString):
+	with open(file, 'r') as f:
+		file_lines = [''.join([tagString, x.strip(), '\n']) for x in f.readlines()]
+	
+	with open(file, 'w') as f:
+		f.writelines(file_lines)
+
 #--------------
 # Extrai as Novas Questoes
 #--------------
+
 fileIn = open('corpora/NovasQuestoes.txt', 'r')
-myset = InOut(fileIn)
+tagWrite('corpora/NovasQuestoes.txt','actor_name ')
+# myset = tagSet(fileIn)
 fileIn.close()
 
-#--------------
-# Extrai REF
-#--------------
-fileRef = open('corpora/NovasQuestoesResultados.txt', 'r')
-ref = read_ref(fileRef)
-fileRef.close()
+# #--------------
+# # Extrai REF
+# #--------------
+# fileRef = open('corpora/NovasQuestoesResultados.txt', 'r')
+# ref = read_ref(fileRef)
+# fileRef.close()
 
