@@ -1,7 +1,6 @@
 #!/bin/bash
 
 rm -f *.fst
-rm -f *.pdf
 
 ######## MMM para MM #########
 fstcompile --isymbols=palavras.syms --osymbols=palavras.syms mmm2mm.txt | fstarcsort > mmm2mm.fst
