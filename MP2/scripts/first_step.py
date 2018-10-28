@@ -37,16 +37,14 @@ def InOut(file):
 #--------------
 # Extrai as Novas Questoes
 #--------------
-fileIn = open('Corpora/NovasQuestoes.txt', 'r')
+fileIn = open('corpora/NovasQuestoes.txt', 'r')
 myset = InOut(fileIn)
 fileIn.close()
 
 #--------------
 # Extrai REF
 #--------------
-fileRef = open('Corpora/NovasQuestoesResultados.txt', 'r')
+fileRef = open('corpora/NovasQuestoesResultados.txt', 'r')
 ref = read_ref(fileRef)
 fileRef.close()
 
-print ("Precision:", precision(ref, myset))
-print ("Recall:", recall(ref, myset))
