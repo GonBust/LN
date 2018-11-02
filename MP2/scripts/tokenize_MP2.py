@@ -1,4 +1,4 @@
-import nltk, re, pprint, random, numpy
+import nltk, re, numpy
 from nltk.tokenize import sent_tokenize, word_tokenize
 #from nltk.corpus import stopwords
 from nltk.classify.scikitlearn import SklearnClassifier
