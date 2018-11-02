@@ -1,1 +1,1 @@
-python3 scripts/first_step.py > Resultados.txt
+python3 scripts/tokenize_MP2.py
