@@ -1,6 +1,6 @@
-import nltk, re, numpy
+import nltk, re, numpy, string
 from nltk.tokenize import sent_tokenize, word_tokenize
-#from nltk.corpus import stopwords
+from nltk.corpus import stopwords
 from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.naive_bayes import MultinomialNB, BernoulliNB
 from pathlib import Path
@@ -10,6 +10,12 @@ known_q = data_folder / 'QuestoesConhecidas.txt'
 new_q = data_folder / 'NovasQuestoes.txt'
 new_q_res = data_folder / 'NovasQuestoesResultados.txt'
 
+def remove_stop_words(sent):
+    stop_words = set(stopwords.words('english'))
+    word_tokens = word_tokenize(sent) 
+    filtered = [w for w in word_tokens if not w in stop_words]
+    new_sent = "".join([" "+i if not i.startswith("'") and i not in string.punctuation else i for i in filtered]).strip()
+    return new_sent
 
 #Lê todas as linhas do ficheiro "QuestoesConhecidas" e guarda-as numas lista. Em seguida separa os elementos por \n (linha)
 with open(known_q) as f:
@@ -19,26 +25,11 @@ _knqslist2 = [x.strip() for x in _knqslist]
 #Cria tuplos com os 2 elementos de cada linha, separados por " \t". Em seguida esses elementos são adicionados a uma lista
 # com a estrutura adequada para treino ('texto','tag').
 train_data = []
-#only_q = []
 for x in _knqslist:
     tag, q = x.split(' \t')
-    q = re.sub(' \n','',q)
-#    q_tokens = word_tokenize(q)
-#    only_q.append(q_tokens)
+    q = remove_stop_words(re.sub(' \n','',q))
     train_data.append((q,tag))
-#print('\n', only_q)
-#print('\n', train_data)
-
-#Remove as stopwords
-#stop_words = set(stopwords.words('english'))
-#for i in only_q:
-#    print(only_q[i])
-#    #filtered_q = [w for w in only_q[i] if not w in stop_words]
-#    #only_q[i] = filtered_q
-#    #print(filtered_q)
-
-
-
+print('\n', train_data)
 
 #Cada palavra em todas as questões é transformada em minúscula e cada questão tokenizada.
 #Verifica a existência das palavras de cada pergunta com as presentes nas "all_words"
@@ -51,7 +42,8 @@ classifier = nltk.NaiveBayesClassifier.train(t)
 #Guarda e tokeniza as novas questoes de teste
 fNewQs = open(new_q).read()
 newQstk = nltk.sent_tokenize(fNewQs)
-#print('\n', newQstk)
+newQstk_no_stop_words = [remove_stop_words(sent) for sent in newQstk]
+print('\n', newQstk_no_stop_words)
 
 #Guarda e tokeniza os resultados
 fNewQsResult = open(new_q_res).read()
