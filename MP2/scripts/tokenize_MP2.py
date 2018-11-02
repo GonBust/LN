@@ -52,7 +52,7 @@ print('\n', newQstkRes)
 
 #Usando o classificador, classifica as novas questões
 results = []
-for x in newQstk:
+for x in newQstk_no_stop_words:
     x_features = {word.lower(): (word in word_tokenize(x.lower())) for word in all_words}
     results.append(classifier.classify(x_features))
 print('\n', results)
