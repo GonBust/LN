@@ -24,3 +24,6 @@ for x in _knqslist:
 #to do - each Q' bag of words. each Q as document? (movie reviews)
 #      - training set
 #      - remember this needs to be multiclass
+#Refs : https://pythonprogramming.net/naive-bayes-classifier-nltk-tutorial/ ; 
+# https://stackoverflow.com/questions/20827741/nltk-naivebayesclassifier-training-for-sentiment-analysis
+# http://www.nltk.org/book/ch06.html
