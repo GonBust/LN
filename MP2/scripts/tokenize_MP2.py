@@ -59,4 +59,4 @@ print('\n', results)
 
 #Imprime a accuracy em eprcentagem
 diff = numpy.sum(numpy.array(newQstkRes) == numpy.array(results))
-print(f'\nClassifier accuracy percent: {(diff * 100) / len(newQstkRes)}')
+print(f'\nClassifier accuracy percent: {"{0:.2f}".format((diff * 100) / len(newQstkRes))}')
