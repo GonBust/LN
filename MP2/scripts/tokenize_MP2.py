@@ -1,21 +1,28 @@
 import nltk, re, numpy, string
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
 from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.naive_bayes import MultinomialNB, BernoulliNB
 from pathlib import Path
 
+ps = PorterStemmer()
 data_folder = Path('corpora')
 known_q = data_folder / 'QuestoesConhecidas.txt'
 new_q = data_folder / 'NovasQuestoes.txt'
 new_q_res = data_folder / 'NovasQuestoesResultados.txt'
 
+#Remove todas as stopwords de um dado argumento
 def remove_stop_words(sent):
-    stop_words = set(stopwords.words('english'))
+    stop_words = set(stopwords.words("english"))
     word_tokens = word_tokenize(sent) 
     filtered = [w for w in word_tokens if not w in stop_words]
     new_sent = "".join([" "+i if not i.startswith("'") and i not in string.punctuation else i for i in filtered]).strip()
     return new_sent
+
+def stem_words(sent):
+    word_tokens = word_tokenize(sent)
+    
 
 #Lê todas as linhas do ficheiro "QuestoesConhecidas" e guarda-as numas lista. Em seguida separa os elementos por \n (linha)
 with open(known_q) as f:
@@ -23,7 +30,7 @@ with open(known_q) as f:
 _knqslist2 = [x.strip() for x in _knqslist]
 
 #Cria tuplos com os 2 elementos de cada linha, separados por " \t". Em seguida esses elementos são adicionados a uma lista
-# com a estrutura adequada para treino ('texto','tag').
+# com a estrutura adequada para treino ('pergunta','tag'). Às perguntas são removidas as stop words. 
 train_data = []
 for x in _knqslist:
     tag, q = x.split(' \t')
@@ -39,7 +46,7 @@ t = [({word : (word in word_tokenize(x[0])) for word in all_words}, x[1]) for x 
 #o classificador NaiveBayes é treinado com o set
 classifier = nltk.NaiveBayesClassifier.train(t)
 
-#Guarda e tokeniza as novas questoes de teste
+#Guarda todas as questões com as stopwords removidas. Tokeniza as frases resultantes.
 fNewQs = open(new_q).read()
 newQstk = nltk.sent_tokenize(fNewQs)
 newQstk_no_stop_words = [remove_stop_words(sent) for sent in newQstk]
