@@ -2,7 +2,8 @@ import nltk, re, numpy, string
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.classify.scikitlearn import SklearnClassifier
-from sklearn.naive_bayes import MultinomialNB, BernoulliNB
+from sklearn.linear_model import LogisticRegression, SGDClassifier
+from sklearn.svm import LinearSVC
 from pathlib import Path
 
 ### PATHS ###
@@ -46,9 +47,9 @@ fNewQs = open(new_q).read()
 newQstk = nltk.sent_tokenize(fNewQs)
 newQstk_worked_on = [remove_stop_words(replace_with_word(sentence, _movieslist, 'movie_title')) for sentence in newQstk]
 
-print('\nnewQstk worked on:\n')
-for i in range(0, len(newQstk_worked_on)):
-    print(f'{i + 1} {newQstk_worked_on[i]}')
+#print('\nnewQstk worked on:\n')
+#for i in range(0, len(newQstk_worked_on)):
+#    print(f'{i + 1} {newQstk_worked_on[i]}')
 
 #Guarda e tokeniza os resultados
 fNewQsResult = open(new_q_res).read()
@@ -64,33 +65,41 @@ for x in _knqslist:
     train_data.append((q,tag))
 
 #Imprime um numero limitado de tuplos de dados
-print('\ntrain data:\n')
-for i in range(0, len(train_data)):
-    print(f'{train_data[i]}')
+#print('\ntrain data:\n')
+#for i in range(0, len(train_data)):
+#    print(f'{train_data[i]}')
 
 #Cada palavra em todas as questões é transformada em minúscula e cada questão tokenizada.
 #Verifica a existência das palavras de cada pergunta com as presentencees nas "all_words"
 all_words = set(word.lower() for passage in train_data for word in word_tokenize(passage[0]))
 t = [({word : (word in word_tokenize(x[0])) for word in all_words}, x[1]) for x in train_data]
 
-#o classificador NaiveBayes é treinado com o set
-classifier = nltk.DecisionTreeClassifier.train(t)
+#### CLASSIFICADOR ####
+#DTclassif = nltk.DecisionTreeClassifier
+LRclassif = SklearnClassifier(LogisticRegression(solver='lbfgs' ,multi_class='ovr'))
+SGDCclassif = SklearnClassifier(SGDClassifier(max_iter=100, tol=None))
+LSVCclassif = SklearnClassifier(LinearSVC())
+classfList = [LRclassif,SGDCclassif,LSVCclassif]
 
-#Usando o classificador, classifica as novas questões
-results = []
-for x in newQstk_worked_on:
-    x_features = {word.lower(): (word in word_tokenize(x.lower())) for word in all_words}
-    results.append(classifier.classify(x_features))
+for classf in classfList:
+    classf.train(t)
+    #Usando o classificador, classifica as novas questões
+    results = []
+    for x in newQstk_worked_on:
+        x_features = {word.lower(): (word in word_tokenize(x.lower())) for word in all_words}
+        results.append(classf.classify(x_features))
 
-print('\nnewQstkRes:\t\tresults:\n')
-for i in range(0, len(results)):
-    print(f'{i + 1}\t{newQstkRes[i]}\t\t{results[i]}')
+    #Imprime as respostas esperadas e os resultados obtidos em 2 colunas separadas
+    #print('\nnewQstkRes:\t\tresults:\n')
+    #for i in range(0, len(results)):
+    #    print(f'{i + 1}\t{newQstkRes[i]}\t\t{results[i]}')
 
-print('\nWrong results:\nline: Question:\t\t\t\t\t\t\t\texpected result:\t\tresult:')
-for i in range(0, len(results)):
-    if newQstkRes[i] != results[i]:
-        print(f'{i + 1} {newQstk[i]}\t\t{newQstkRes[i]}\t\t{results[i]}\n')
+    #Imprime apenas os resultados "errados"
+    print('\nWrong results:\nline: Question:\t\texpected:\t\tclassf:')
+    for i in range(0, len(results)):
+        if newQstkRes[i] != results[i]:
+            print(f'{i + 1} {newQstk[i]}\t\t{newQstkRes[i]}\t\t{results[i]}')
 
-#Imprime a accuracy em percentagem
-diff = numpy.sum(numpy.array(newQstkRes) == numpy.array(results))
-print(f'\nClassifier accuracy percent: {"{0:.2f}".format((diff * 100) / len(newQstkRes))}')
+    #Imprime a accuracy em percentagem
+    diff = numpy.sum(numpy.array(newQstkRes) == numpy.array(results))
+    print(f'\nClassifier accuracy percent: {"{0:.2f}".format((diff * 100) / len(newQstkRes))}')
