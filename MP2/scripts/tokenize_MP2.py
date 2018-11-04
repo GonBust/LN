@@ -22,6 +22,7 @@ def remove_stop_words(sentence):
     new_sentence = "".join([" "+i if not i.startswith("'") and i not in string.punctuation else i for i in filtered]).strip()
     return new_sentence
 
+#Substitui um elemento da frase por uma palavra, caso encontre o elemento na lista
 def replace_with_word(sentence, words_list, word):
     for words in words_list:
         if words in sentence:
