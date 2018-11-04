@@ -22,7 +22,9 @@ def remove_stop_words(sent):
 
 def stem_words(sent):
     word_tokens = word_tokenize(sent)
-    
+    stemmed = [ps.stem(w) for w in word_tokens]
+    new_sent = "".join([" "+i if not i.startswith("'") and i not in string.punctuation else i for i in stemmed]).strip()
+    return new_sent
 
 #Lê todas as linhas do ficheiro "QuestoesConhecidas" e guarda-as numas lista. Em seguida separa os elementos por \n (linha)
 with open(known_q) as f:
@@ -35,8 +37,12 @@ train_data = []
 for x in _knqslist:
     tag, q = x.split(' \t')
     q = remove_stop_words(re.sub(' \n','',q))
-    train_data.append((q,tag))
-print('\n', train_data)
+    q_stemmed = stem_words(q)
+    train_data.append((q_stemmed,tag))
+
+print('\ntrain data:\n')
+for i in range(0, 10):
+    print(f'{train_data[i]}')
 
 #Cada palavra em todas as questões é transformada em minúscula e cada questão tokenizada.
 #Verifica a existência das palavras de cada pergunta com as presentes nas "all_words"
@@ -50,19 +56,25 @@ classifier = nltk.NaiveBayesClassifier.train(t)
 fNewQs = open(new_q).read()
 newQstk = nltk.sent_tokenize(fNewQs)
 newQstk_no_stop_words = [remove_stop_words(sent) for sent in newQstk]
-print('\n', newQstk_no_stop_words)
+newQstk_stemmed = [stem_words(sent) for sent in newQstk_no_stop_words]
+
+print('\nnewQstk_stemmed:\n')
+for i in range(0, 10):
+    print(f'{newQstk_stemmed[i]}')
 
 #Guarda e tokeniza os resultados
 fNewQsResult = open(new_q_res).read()
 newQstkRes = nltk.word_tokenize(fNewQsResult)
-print('\n', newQstkRes)
 
 #Usando o classificador, classifica as novas questões
 results = []
-for x in newQstk_no_stop_words:
+for x in newQstk_stemmed:
     x_features = {word.lower(): (word in word_tokenize(x.lower())) for word in all_words}
     results.append(classifier.classify(x_features))
-print('\n', results)
+
+print('\nnewQstkRes:\t\tresults:\n')
+for i in range(0, 42):
+    print(f'{newQstkRes[i]}\t\t{results[i]}')
 
 #Imprime a accuracy em eprcentagem
 diff = numpy.sum(numpy.array(newQstkRes) == numpy.array(results))
