@@ -30,7 +30,6 @@ def replace_with_word(sentence, words_list, word):
     return sentence
 
 ######### FILE READERS #########
-
 #Guarda todos os movies encontrados em list_movies
 with open(rec_list_movies) as f:
     _movieslist = f.readlines()
@@ -47,8 +46,8 @@ newQstk = nltk.sent_tokenize(fNewQs)
 newQstk_worked_on = [remove_stop_words(replace_with_word(sentence, _movieslist, 'movie_title')) for sentence in newQstk]
 
 print('\nnewQstk worked on:\n')
-for i in range(0, 10):
-    print(f'{newQstk_worked_on[i]}')
+for i in range(0, len(newQstk_worked_on)):
+    print(f'{i + 1} {newQstk_worked_on[i]}')
 
 #Guarda e tokeniza os resultados
 fNewQsResult = open(new_q_res).read()
@@ -65,7 +64,7 @@ for x in _knqslist:
 
 #Imprime um numero limitado de tuplos de dados
 print('\ntrain data:\n')
-for i in range(0, 10):
+for i in range(0, len(train_data)):
     print(f'{train_data[i]}')
 
 #Cada palavra em todas as questões é transformada em minúscula e cada questão tokenizada.
@@ -83,17 +82,13 @@ for x in newQstk_worked_on:
     results.append(classifier.classify(x_features))
 
 print('\nnewQstkRes:\t\tresults:\n')
-line = 0
-for i in range(0, 42):
-    line += 1
-    print(f'{line}\t{newQstkRes[i]}\t\t{results[i]}')
+for i in range(0, len(results)):
+    print(f'{i + 1}\t{newQstkRes[i]}\t\t{results[i]}')
 
-print('\nWrong results:\nline: Question:\t\t\t\t\t\t\t\tright result:\t\tresult:')
-line = 0
-for i in range(0, 42):
-    line += 1
+print('\nWrong results:\nline: Question:\t\t\t\t\t\t\t\texpected result:\t\tresult:')
+for i in range(0, len(results)):
     if newQstkRes[i] != results[i]:
-        print(f'{line} {newQstk[i]}\t\t{newQstkRes[i]}\t\t{results[i]}\n')
+        print(f'{i + 1} {newQstk[i]}\t\t{newQstkRes[i]}\t\t{results[i]}\n')
 
 #Imprime a accuracy em percentagem
 diff = numpy.sum(numpy.array(newQstkRes) == numpy.array(results))
