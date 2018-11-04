@@ -73,8 +73,17 @@ for x in newQstk_stemmed:
     results.append(classifier.classify(x_features))
 
 print('\nnewQstkRes:\t\tresults:\n')
+line = 0
 for i in range(0, 42):
-    print(f'{newQstkRes[i]}\t\t{results[i]}')
+    line += 1
+    print(f'{line}\t{newQstkRes[i]}\t\t{results[i]}')
+
+print('\nWrong results:\nline: Question:\t\t\t\t\t\tright result:\t\tresult:')
+line = 0
+for i in range(0, 42):
+    line += 1
+    if newQstkRes[i] != results[i]:
+        print(f'{line} {newQstk[i]}\t\t{newQstkRes[i]}\t\t{results[i]}\n')
 
 #Imprime a accuracy em eprcentagem
 diff = numpy.sum(numpy.array(newQstkRes) == numpy.array(results))
