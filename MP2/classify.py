@@ -1,4 +1,4 @@
-import nltk, re, numpy, string
+import sys, nltk, re, numpy, string
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.classify.scikitlearn import SklearnClassifier
@@ -19,7 +19,10 @@ class VoteClassifier(ClassifierI):
         for c in self._classifiers:
             v = c.classify(features)
             votes.append(v)
-        return mode(votes)
+        if len(votes) > len(set(votes)):
+            return mode(votes)
+        else:
+            return votes[0]
     
     def confidence(self, features):
         votes = []
@@ -31,12 +34,16 @@ class VoteClassifier(ClassifierI):
         return conf
 
 ### PATHS ###
-data_folder = Path('corpora')
+#data_folder = Path('corpora')
 rec_folder = Path('recursos')
-known_q = data_folder / 'QuestoesConhecidas.txt'
-new_q = data_folder / 'NovasQuestoes.txt'
-new_q_res = data_folder / 'NovasQuestoesResultados.txt'
+#known_q = data_folder / 'QuestoesConhecidas.txt'
+#new_q = data_folder / 'NovasQuestoes.txt'
+#new_q_res = data_folder / 'NovasQuestoesResultados.txt'
+known_q = str(sys.argv[1])
+new_q = str(sys.argv[2])
 rec_list_movies = rec_folder / 'list_movies.txt'
+rec_list_people = rec_folder / 'list_people.txt'
+rec_list_people = rec_folder / 'list_characters.txt'
 
 ######### FUNCOES DE SUPORTE #########
 #Remove todas as stopwords de um dado argumento
@@ -56,10 +63,18 @@ def replace_with_word(sentence, words_list, word):
     return sentence
 
 ######### FILE READERS #########
-#Guarda todos os movies encontrados em list_movies
+#Guarda todos os recursos em listas
 with open(rec_list_movies) as f:
     _movieslist = f.readlines()
 _movieslist = [x.strip() for x in _movieslist]
+
+with open(rec_list_movies) as f:
+    _peoplelist = f.readlines()
+_peoplelist = [x.strip() for x in _peoplelist]
+
+with open(rec_list_movies) as f:
+    _characterlist = f.readlines()
+_characterlist = [x.strip() for x in _characterlist]
 
 #Lê todas as linhas do ficheiro "QuestoesConhecidas" e guarda-as numas lista. Em seguida separa os elementos por \n (linha)
 with open(known_q) as f:
@@ -69,11 +84,11 @@ _knqslist2 = [x.strip() for x in _knqslist]
 #Guarda todas as questões com as stopwords removidas. Tokeniza as frases resultantes.
 fNewQs = open(new_q).read()
 newQstk = nltk.sent_tokenize(fNewQs)
-newQstk_worked_on = [remove_stop_words(replace_with_word(sentence, _movieslist, 'movie_title')) for sentence in newQstk]
+newQstk_worked_on = [remove_stop_words(replace_with_word(replace_with_word(replace_with_word(sentence, _movieslist, 'movie_title'), _peoplelist, 'person'), _characterlist, 'character')) for sentence in newQstk]
 
-#Guarda e tokeniza os resultados
-fNewQsResult = open(new_q_res).read()
-newQstkRes = nltk.word_tokenize(fNewQsResult)
+##Guarda e tokeniza os resultados
+#fNewQsResult = open(new_q_res).read()
+#newQstkRes = nltk.word_tokenize(fNewQsResult)
 
 ######### TRAIN AND TEST SET #########
 #Cria tuplos com os 2 elementos de cada linha, separados por " \t". Em seguida esses elementos são adicionados a uma lista
@@ -81,7 +96,7 @@ newQstkRes = nltk.word_tokenize(fNewQsResult)
 train_data = []
 for x in _knqslist:
     tag, q = x.split(' \t')
-    q = remove_stop_words(replace_with_word(re.sub(' \n','',q), _movieslist, 'movie_title'))
+    q = remove_stop_words(replace_with_word(replace_with_word(replace_with_word(re.sub(' \n','',q), _movieslist, 'movie_title'), _peoplelist, 'person'), _characterlist, 'character'))
     train_data.append((q,tag))
 
 #Cada palavra em todas as questões é transformada em minúscula e cada questão tokenizada.
@@ -102,12 +117,6 @@ for x in newQstk_worked_on:
     results.append(voted_classifer.classify(x_features))
     #print(voted_classifer.confidence(x_features))
 
-#Imprime apenas os resultados "errados"
-print('\nWrong results:\nline: Question:\t\texpected:\t\tclassf:')
+#Imprime apenas os resultados um por linha
 for i in range(0, len(results)):
-    if newQstkRes[i] != results[i]:
-        print(f'{i + 1} {newQstk[i]}\t\t{newQstkRes[i]}\t\t{results[i]}')
-
-#Imprime a accuracy em percentagem
-diff = numpy.sum(numpy.array(newQstkRes) == numpy.array(results))
-print(f'\nClassifier accuracy percent: {"{0:.2f}".format((diff * 100) / len(newQstkRes))}')
+    print(f'{results[i]}')

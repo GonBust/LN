@@ -1,1 +1,1 @@
-python3 scripts/tokenize_MP2.py
+python3 classify.py $1 $2
