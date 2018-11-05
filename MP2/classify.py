@@ -34,15 +34,16 @@ class VoteClassifier(ClassifierI):
         return conf
 
 ### PATHS ###
-#data_folder = Path('corpora')
+data_folder = Path('corpora')
 rec_folder = Path('recursos')
-#known_q = data_folder / 'QuestoesConhecidas.txt'
-#new_q = data_folder / 'NovasQuestoes.txt'
-#new_q_res = data_folder / 'NovasQuestoesResultados.txt'
-known_q = str(sys.argv[1])
-new_q = str(sys.argv[2])
+known_q = data_folder / 'QuestoesConhecidas.txt'
+new_q = data_folder / 'NovasQuestoes.txt'
+new_q_res = data_folder / 'NovasQuestoesResultados.txt'
+#known_q = str(sys.argv[1])
+#new_q = str(sys.argv[2])
 rec_list_movies = rec_folder / 'list_movies.txt'
 rec_list_people = rec_folder / 'list_people.txt'
+rec_list_companies = rec_folder / 'list_companies.txt'
 
 ######### FUNCOES DE SUPORTE #########
 #Remove todas as stopwords de um dado argumento
@@ -71,25 +72,31 @@ with open(rec_list_people) as f:
     _peoplelist = f.readlines()
 _peoplelist = [x.strip() for x in _peoplelist]
 
+with open(rec_list_companies) as f:
+    _companieslist = f.readlines()
+_companieslist = [x.strip() for x in _companieslist]
+
 #Lê todas as linhas do ficheiro "QuestoesConhecidas" e guarda-as numas lista. Em seguida separa os elementos por \n (linha)
 with open(known_q) as f:
     _knqslist = f.readlines()
 _knqslist2 = [x.strip() for x in _knqslist]
 
-#Guarda todas as questões com as stopwords removidas. Tokeniza as frases resultantes.
+#Guarda todas as questões com as stopwords removidas e palavras substituidas. Tokeniza as frases resultantes.
 fNewQs = open(new_q).read()
 newQstk = nltk.sent_tokenize(fNewQs)
 newQstk = [replace_with_word(sentence, _movieslist, 'movie_title') for sentence in newQstk]
 newQstk = [replace_with_word(sentence, _peoplelist, 'person_name') for sentence in newQstk]
+newQstk = [replace_with_word(sentence, _companieslist, 'prod_company') for sentence in newQstk]
 newQstk = [remove_stop_words(sentence) for sentence in newQstk]
 
 ##Guarda e tokeniza os resultados
-#fNewQsResult = open(new_q_res).read()
-#newQstkRes = nltk.word_tokenize(fNewQsResult)
+fNewQsResult = open(new_q_res).read()
+newQstkRes = nltk.word_tokenize(fNewQsResult)
 
 #Imprime apenas os resultados um por linha
-for i in range(0, len(newQstk)):
-    print(f'{i + 1} {newQstk[i]}')
+#for i in range(0, len(newQstk)):
+#    print(f'{i + 1} {newQstk[i]}')
+
 ######### TRAIN AND TEST SET #########
 #Cria tuplos com os 2 elementos de cada linha, separados por " \t". Em seguida esses elementos são adicionados a uma lista
 #com a estrutura adequada para treino ('pergunta','tag'). Às perguntas são removidas as stop words. 
@@ -97,6 +104,8 @@ train_data = []
 for x in _knqslist:
     tag, q = x.split(' \t')
     q = remove_stop_words(replace_with_word(re.sub(' \n','',q), _movieslist, 'movie_title'))
+    q = replace_with_word(q, _peoplelist, 'person_name')
+    q = replace_with_word(q, _companieslist, 'prod_company')
     train_data.append((q,tag))
 
 #Cada palavra em todas as questões é transformada em minúscula e cada questão tokenizada.
@@ -118,5 +127,14 @@ for x in newQstk:
     #print(voted_classifer.confidence(x_features))
 
 #Imprime apenas os resultados um por linha
+#for i in range(0, len(results)):
+#    print(f'{results[i]}')
+
+#Imprime as respostas esperadas e os resultados obtidos em 2 colunas separadas
+print('\nnewQstkRes:\t\tresults:\n')
 for i in range(0, len(results)):
-    print(f'{results[i]}')
+    print(f'{i + 1}\t{newQstkRes[i]}\t\t{results[i]}')
+
+#Imprime a accuracy em percentagem
+diff = numpy.sum(numpy.array(newQstkRes) == numpy.array(results))
+print(f'\nClassifier accuracy percent: {"{0:.2f}".format((diff * 100) / len(newQstkRes))}')
