@@ -34,13 +34,13 @@ class VoteClassifier(ClassifierI):
         return conf
 
 ### PATHS ###
-data_folder = Path('corpora')
+#data_folder = Path('corpora')
 rec_folder = Path('recursos')
-known_q = data_folder / 'QuestoesConhecidas.txt'
-new_q = data_folder / 'NovasQuestoes.txt'
-new_q_res = data_folder / 'NovasQuestoesResultados.txt'
-#known_q = str(sys.argv[1])
-#new_q = str(sys.argv[2])
+#known_q = data_folder / 'QuestoesConhecidas.txt'
+#new_q = data_folder / 'NovasQuestoes.txt'
+#new_q_res = data_folder / 'NovasQuestoesResultados.txt'
+known_q = str(sys.argv[1])
+new_q = str(sys.argv[2])
 rec_list_movies = rec_folder / 'list_movies.txt'
 rec_list_people = rec_folder / 'list_people.txt'
 rec_list_companies = rec_folder / 'list_companies.txt'
@@ -90,8 +90,8 @@ newQstk = [replace_with_word(sentence, _companieslist, 'prod_company') for sente
 newQstk = [remove_stop_words(sentence) for sentence in newQstk]
 
 ##Guarda e tokeniza os resultados
-fNewQsResult = open(new_q_res).read()
-newQstkRes = nltk.word_tokenize(fNewQsResult)
+#fNewQsResult = open(new_q_res).read()
+#newQstkRes = nltk.word_tokenize(fNewQsResult)
 
 #Imprime apenas os resultados um por linha
 #for i in range(0, len(newQstk)):
@@ -103,9 +103,11 @@ newQstkRes = nltk.word_tokenize(fNewQsResult)
 train_data = []
 for x in _knqslist:
     tag, q = x.split(' \t')
-    q = remove_stop_words(replace_with_word(re.sub(' \n','',q), _movieslist, 'movie_title'))
+    q = re.sub(' \n','',q)
+    q = replace_with_word(q, _movieslist, 'movie_title')
     q = replace_with_word(q, _peoplelist, 'person_name')
     q = replace_with_word(q, _companieslist, 'prod_company')
+    q = remove_stop_words(q)
     train_data.append((q,tag))
 
 #Cada palavra em todas as questões é transformada em minúscula e cada questão tokenizada.
@@ -131,10 +133,13 @@ for x in newQstk:
 #    print(f'{results[i]}')
 
 #Imprime as respostas esperadas e os resultados obtidos em 2 colunas separadas
-print('\nnewQstkRes:\t\tresults:\n')
-for i in range(0, len(results)):
-    print(f'{i + 1}\t{newQstkRes[i]}\t\t{results[i]}')
+#print('\nnewQstkRes:\t\tresults:\n')
+#for i in range(0, len(results)):
+#    print(f'{i + 1}\t{newQstkRes[i]}\t\t{results[i]}')
 
-#Imprime a accuracy em percentagem
-diff = numpy.sum(numpy.array(newQstkRes) == numpy.array(results))
-print(f'\nClassifier accuracy percent: {"{0:.2f}".format((diff * 100) / len(newQstkRes))}')
+for i in range(0, len(results)):
+    print(f'{results[i]}')
+
+##Imprime a accuracy em percentagem
+#diff = numpy.sum(numpy.array(newQstkRes) == numpy.array(results))
+#print(f'\nClassifier accuracy percent: {"{0:.2f}".format((diff * 100) / len(newQstkRes))}')

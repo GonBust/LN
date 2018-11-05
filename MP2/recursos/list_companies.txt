@@ -26,7 +26,7 @@ Productions GmbH & Co. KG
 22 & Indiana Pictures
 26 Films
 2929 Productions
-2DUX≤
+2DUX¬≤
 2S Films
 3 Arts Entertainment
 3 Dogs and a Pony
@@ -52,7 +52,7 @@ Productions GmbH & Co. KG
 4DH Films
 4Go West Productions
 4M
-4Ω
+4¬Ω
 5150 Action
 80 Days Productions
 87Eleven
@@ -262,7 +262,7 @@ Anonymous Content
 Anouchka Films
 Antares Produzione Cinematografica
 Antena 3 Films
-Antena 3 TelevisiÛn
+Antena 3 Televisi√≥n
 Anthem Pictures
 Anthem Productions
 Antidote Films (I).
@@ -273,7 +273,7 @@ Anvil Films
 Apaches Entertainment
 Apatow Productions
 Aperture Entertainment
-ApipoulaÔ
+Apipoula√Ø
 Apjac International
 ApolloMedia Distribution
 ApolloProMedia GmbH & Co. 1. Filmproduktion KG (I).
@@ -300,7 +300,7 @@ Ardustry Entertainment
 Arena
 Argonaut Pictures
 Argyle Enterprises
-Ariane MararÌa Films
+Ariane Marar√≠a Films
 ArieScope Pictures
 Arion Communications Ltd.
 Aristos Films
@@ -310,14 +310,14 @@ Armada Films
 Armory Films
 Arnold Kopelson Productions
 Arrowstorm Entertainment
-ArsÈnico Producciones
+Ars√©nico Producciones
 Art In Motion
 Art Linson Productions
 Art Pictures Studio
-Artcam y Fonds Sud CinÈma
+Artcam y Fonds Sud Cin√©ma
 Arte
 Arte France
-Arte France CinÈma
+Arte France Cin√©ma
 Artemis Films
 Artemple - Hollywood
 Artfire Films
@@ -330,8 +330,8 @@ Artists Independent Network
 Artists Production Group (APG).
 Artists Public Domain
 Arts Council of England
-Arturo Gonz·lez Producciones Cinematogr·ficas S.A.
-ArtÈmis Productions
+Arturo Gonz√°lez Producciones Cinematogr√°ficas S.A.
+Art√©mis Productions
 Asahi Soft Drinks Company
 Ascendant Pictures
 Ascension Pictures
@@ -345,7 +345,7 @@ Asis Productions
 Asmik Ace Entertainment
 Assassin Films
 Associated General Films
-Astral Bellevue PathÈ
+Astral Bellevue Path√©
 Astral Films
 Astral Media
 Asylum
@@ -363,7 +363,7 @@ Atlas Entertainment
 Atman Entertainment
 Atmosphere Entertainment MM
 Atomic Monster
-Attitude PinÌculas y Films A.I.E.
+Attitude Pin√≠culas y Films A.I.E.
 Audiovisual Aval SGR
 Audley Films
 Audley Films LLP
@@ -533,7 +533,7 @@ Bill Kenwright Films
 Bill Plympton Studios
 Bill/Phillips
 BillBlock Media
-Biograf Jan Sv?r·k
+Biograf Jan Svƒõr√°k
 Birchwood Pictures
 Bird and a Bear Entertainment
 Birdsong Pictures
@@ -610,7 +610,7 @@ Bookshop Productions
 Boram Entertainment Inc.
 BorderLine Films
 Born of War
-BorÈales
+Bor√©ales
 Bottom Line Entertainment
 Bottom of the Ninth Productions
 Bourne Again
@@ -690,8 +690,8 @@ Butterfly Productions
 Byronic Pose Productions
 Bystander Films
 Bystorm Films
-BÈsame Mucho Pictures
-BÛrd Scann·n na h…ireann
+B√©same Mucho Pictures
+B√≥rd Scann√°n na h√âireann
 C & L
 C&P Productions
 C-2 Pictures
@@ -735,7 +735,7 @@ Canal Plus Group
 Canal Plus Overseas
 Canal+
 Canal+ Droits Audiovisuels
-Canal+ EspaÒa
+Canal+ Espa√±a
 Canal+ Polska
 Canal+ Television AB
 Canal+Polska
@@ -801,10 +801,10 @@ Central Cinema Company Film
 Central Films
 Central Motion Pictures
 Central-Europa Film
-Centre National de la CinÈmatographie
-Centre National de la CinÈmatographie (CNC).
-Centre National du CinÈma et de L'image AnimÈe (CNC).
-Centre RÈgional des Ressources Audiovisuelles (CRRAV).
+Centre National de la Cin√©matographie
+Centre National de la Cin√©matographie (CNC).
+Centre National du Cin√©ma et de L'image Anim√©e (CNC).
+Centre R√©gional des Ressources Audiovisuelles (CRRAV).
 Centropolis Entertainment
 Centropolis Film Productions
 Centrul National al Cinematografiei (CNC).
@@ -868,7 +868,7 @@ Chubu-nippon Broadcasting Company (CBC).
 Chum Television
 Chunqiu Time Culture Co.
 CiBy 2000
-Ciclic - RÈgion Centre
+Ciclic - R√©gion Centre
 Cimarron Productions
 Cindy Cowan Entertainment
 Cine Bazar
@@ -879,7 +879,7 @@ CineSon Entertainment
 Cineblue Internationale Filmproduktionsgesellschaft
 Cineclick Asia
 Cinecolor-Argentina
-Cinecolor-MÈxico
+Cinecolor-M√©xico
 Cinecorp
 Cinefrance
 Cinelamda Internationale Filmproduktionsgesellschaft
@@ -913,17 +913,17 @@ Cineroma SRL
 Cinestyle Media Group
 Cinetel Films
 Cineville
-CinÈ+
-CinÈ@
-CinÈCinÈma
-CinÈart
-CinÈfeel Prod
-CinÈfondation
-CinÈfrance 1888
-CinÈmage 3
-CinÈmage 4
-CinÈmage 8
-CinÈmaginaire Inc.
+Cin√©+
+Cin√©@
+Cin√©Cin√©ma
+Cin√©art
+Cin√©feel Prod
+Cin√©fondation
+Cin√©france 1888
+Cin√©mage 3
+Cin√©mage 4
+Cin√©mage 8
+Cin√©maginaire Inc.
 City Film
 City Light Films
 City Productions
@@ -935,7 +935,7 @@ Class 5 Films
 Classic Media
 Classic Media Productions
 Claudie Ossard Productions
-Claussen + Wˆbke Filmproduktion GmbH
+Claussen + W√∂bke Filmproduktion GmbH
 Clavius Base
 Clear Blue Sky Productions
 Clear Lake Entertainment
@@ -987,7 +987,7 @@ Comedy Central
 Comedy Central Films
 Comedy Partners
 Commission du Film France
-Commission du Film Œle-de-France
+Commission du Film √éle-de-France
 Company Pictures
 Compass International Pictures
 Compound B
@@ -998,10 +998,10 @@ Concorde Film Trust
 Connectic Studio
 Conquest Productions
 Conquistador Entertainment
-Conseil GÈnÈral des CÙtes d'Armor
-Conseil GÈnÈral du Morbihan
-Conseil RÈgional de Franche-ComtÈ
-Conseil RÈgional du Calvados
+Conseil G√©n√©ral des C√¥tes d'Armor
+Conseil G√©n√©ral du Morbihan
+Conseil R√©gional de Franche-Comt√©
+Conseil R√©gional du Calvados
 Consejo Nacional para la Cultura y las Artes (CONACULTA).
 Constant c Productions
 Constantin Film
@@ -1025,8 +1025,8 @@ Copacetic Pictures
 Copag V
 Copperheart Entertainment
 Coram Deo Studios
-CorazÛn International
-CoraÁ„o da Selva
+Coraz√≥n International
+Cora√ß√£o da Selva
 Corduroy Films
 Core Productions
 Cornelius Productions
@@ -1181,7 +1181,7 @@ De Milo
 De Wolfe Music
 DeBart
 Dead Crow Productions
-Dead FiancÈe Productions
+Dead Fianc√©e Productions
 Dead Films
 Dean River Productions
 Dear Film Produzione
@@ -1221,7 +1221,7 @@ Detention Films
 Detour Film Production
 Detour Filmproduction
 Deuce Three Productions
-Deutsche Filmfˆrderfonds (DFFF).
+Deutsche Filmf√∂rderfonds (DFFF).
 Deviant Films
 Devonshire Productions
 Dharma Productions
@@ -1320,7 +1320,7 @@ Dunulf Productions
 Duplass Brothers Productions
 Dylan Sellers Productions
 Dynamo
-DÈvelopimage 2
+D√©velopimage 2
 EDI
 EDKO Film
 EFTI
@@ -1391,7 +1391,7 @@ Elevation Filmworks
 Elevation Pictures
 Eleventh Street Production
 Elle Driver
-ElÌas Querejeta Producciones Cinematogr·ficas S.L.
+El√≠as Querejeta Producciones Cinematogr√°ficas S.L.
 Embargo Films
 Embassy International Pictures
 Emergency Films
@@ -1427,7 +1427,7 @@ Eon Productions
 Epicentral Studios
 Epidemic Pictures
 Epithete films
-EpithËte Films
+Epith√®te Films
 Epsilon Motion Pictures
 Equity Pictures Medienfonds GmbH & Co. KG II
 Equity Pictures Medienfonds GmbH & Co. KG III
@@ -1444,7 +1444,7 @@ Essential Media & Entertainment
 Esta Vivo! Laboratorio de Nuevos Talentos
 Estudios Churubusco Azteca
 Estudios Picasso
-Est˙dios Mega
+Est√∫dios Mega
 Etalon film
 Eter Pictures
 Euforia Film
@@ -1454,7 +1454,7 @@ Eurimages
 Euro Film Funding
 Euro International Film (EIA).
 Euroatlantica
-Eurofilm St˙diÛ
+Eurofilm St√∫di√≥
 Euroimages Fund of the Council of Europe
 Europa Corp
 Europa Film Sound Production
@@ -1536,13 +1536,13 @@ Feature Film Project, The
 Feelgood Entertainment
 Feelin' Guilty
 Feigco Entertainment
-Feij„o Filmes
+Feij√£o Filmes
 Feingold Productions
 Fellah Pictures
 Fellowship Adventure Group
 Fidecine
-FidÈlitÈ Films
-FidÈlitÈ Productions
+Fid√©lit√© Films
+Fid√©lit√© Productions
 Field Guide Films
 Fierce Entertainment
 Fifty First Films
@@ -1574,10 +1574,10 @@ Film Science
 Film Threat DVD
 Film Tiger
 Film Victoria
-Film V‰st
+Film V√§st
 Film Workshop
 Film and General Productions
-Film i V‰st
+Film i V√§st
 Film- und Medienstiftung NRW
 Film4
 FilmCamp
@@ -1597,14 +1597,14 @@ Filmax Group
 Filmax International
 Filmazure
 Filmboard Berlin-Brandenburg (FBB).
-Filmcoopi Z¸rich
+Filmcoopi Z√ºrich
 Filmek A/S
 Filmfabriken Baltic Sea AB
 Filmfour
-Filmfˆrderanstalt (FFA).
-Filmfˆrderung Hamburg
-Filmfˆrderung Hamburg Schleswig-Holstein
-Filmfˆrderungsanstalt (FFA).
+Filmf√∂rderanstalt (FFA).
+Filmf√∂rderung Hamburg
+Filmf√∂rderung Hamburg Schleswig-Holstein
+Filmf√∂rderungsanstalt (FFA).
 Filmgate Films
 Filmhuset Gruppen
 Filmkameratene A/S
@@ -1665,11 +1665,11 @@ Focus Features
 Focus Features International (FFI).
 Focus Films
 Follow Through Productions
-Fondation GAN pour le CinÈma
-Fondo de InversiÛn y EstÌmulos al Cine (FIDECINE).
-Fondo para la ProducciÛn Cinematogr·fica de Calidad (FOPROCINE).
+Fondation GAN pour le Cin√©ma
+Fondo de Inversi√≥n y Est√≠mulos al Cine (FIDECINE).
+Fondo para la Producci√≥n Cinematogr√°fica de Calidad (FOPROCINE).
 Fonds Eurimages du Conseil de l'Europe
-Fonds Sud CinÈma
+Fonds Sud Cin√©ma
 Fontana Productions
 Forecast Pictures
 Forensic Films
@@ -1704,14 +1704,14 @@ Fragile Films
 Fragmighty
 Framestore
 France 2 (FR2).
-France 2 CinÈma
+France 2 Cin√©ma
 France 3 (FR 3).
 France 3 Cinema
-France 3 CinÈma
+France 3 Cin√©ma
 France 4
-France TÈlÈvision
-France TÈlÈvisions
-France2 CinÈma
+France T√©l√©vision
+France T√©l√©visions
+France2 Cin√©ma
 Franchise Pictures
 Franklin/Waterman Productions
 Frantic Films
@@ -1753,7 +1753,7 @@ Future Films Production Services
 Futurikon
 Fuzzy Bunny Films (I).
 Fuzzy Door Productions
-F¸nfte Babelsberg Film
+F√ºnfte Babelsberg Film
 G.T. Film Production
 GAGA
 GF Studios AB
@@ -1768,7 +1768,7 @@ Gala Film
 Gala Films
 Galactic Films
 Galafilm Productions
-GalatÈe Films
+Galat√©e Films
 Galavis Film
 Galaxy Productions
 Gama Entertainment Partners
@@ -1787,7 +1787,7 @@ Geffen Pictures
 Geisler-Roberdeau
 Gener8Xion Entertainment
 Generalitat Valenciana
-Generalitat de Catalunya - Institut Catal‡ de les Ind˙stries Culturals (ICIC).
+Generalitat de Catalunya - Institut Catal√† de les Ind√∫stries Culturals (ICIC).
 Genetics Productions
 Genre Films
 Geoffrey Productions
@@ -1923,7 +1923,7 @@ Gullane Entretenimento S.A.
 Gunless Productions
 Gunn Films
 Guy Walks into a Bar Productions
-GÈbÈka Films
+G√©b√©ka Films
 H&H Creative Ventures
 H2F Entertainment
 H2S2 Filmproduktionsgesellschaft
@@ -1939,7 +1939,7 @@ HSI Productions
 HSI Tomorrow Film
 HSX Films
 HW Two
-Hachette PremiËre
+Hachette Premi√®re
 Hachiko
 Hacienda Productions
 Haddock Films S.R.L.
@@ -2040,7 +2040,7 @@ HighRoad Entertainment
 Highland Films
 Hilary Henkin
 Hilton Media Management
-HimenÛptero
+Himen√≥ptero
 Hirsch
 Hit & Run Productions
 HitRecord Films
@@ -2139,7 +2139,7 @@ Identity Films
 Ignite Entertainment
 Iguana Producciones
 Ikiru Films
-IkÈ Asistencia
+Ik√© Asistencia
 Ilion Animation Studios
 Illuminata Pictures
 Illumination Entertainment
@@ -2186,8 +2186,8 @@ Industrial Entertainment
 Industrial House Films
 Industrial Light & Magic (ILM).
 Industry Entertainment
-IndÈfilms 2
-IndÈfilms 3
+Ind√©films 2
+Ind√©films 3
 Inferno Distribution
 Inferno Entertainment
 Inferno International
@@ -2214,13 +2214,13 @@ Inside Track Productions
 Insight Film Releasing
 Insight Productions
 Instinctive Film
-Institut Catal‡ de les Empreses Culturals (ICEC).
-Institut Valenci„ de Cinematografia (IVAC).
+Institut Catal√† de les Empreses Culturals (ICEC).
+Institut Valenci√£ de Cinematografia (IVAC).
 Institution, The
-Instituto Mexicano de CinematografÌa
+Instituto Mexicano de Cinematograf√≠a
 Instituto Nacional de Cine y Artes Audiovisuales (INCAA).
-Instituto de CrÈdito Oficial (ICO).
-Instituto de la CinematografÌa y de las Artes Audiovisuales (ICAA).
+Instituto de Cr√©dito Oficial (ICO).
+Instituto de la Cinematograf√≠a y de las Artes Audiovisuales (ICAA).
 Insurge Pictures
 Intandem Films
 Intellectual Properties Worldwide
@@ -2240,7 +2240,7 @@ Internationale Filmproduktion Prometheus
 Internationale Filmproduktion Richter
 Internationale Filmproduktion Stella-del-Sud Second
 Internationale Filmproduktion Stella-del-Sud Third
-Internationale Filmproduktion Stella-del-S¸d
+Internationale Filmproduktion Stella-del-S√ºd
 Internationale Scarena Filmproduktionsgesellschaft 2
 Interscope Communications
 Intial Productions
@@ -2358,7 +2358,7 @@ Joseph Nittolo Entertainment
 Josephson Entertainment
 Jouer Limited
 Journeyman Pictures
-Jouror DÈveloppement
+Jouror D√©veloppement
 Jouror Productions
 Judgement Pictures
 Julia Phillips and Michael Phillips Productions
@@ -2387,7 +2387,7 @@ Kalis Productions GmbH & Co. Zweite KG
 Kalkaska Productions
 Kalkronkie
 Kaltenbach Pictures
-KalÈo Films
+Kal√©o Films
 Kameraudlejningen
 Kamisha Corporation
 Kanal Russia 1
@@ -2439,7 +2439,7 @@ Kinokompaniya CTB
 Kinowelt Filmproduktion
 Kinowelt Median
 Kintop Pictures
-KinÈtique Inc.
+Kin√©tique Inc.
 KirchMedia
 Kirghizfilm
 Kite Runner Holdings
@@ -2467,7 +2467,7 @@ Kurosawa Production Co.
 Kurtzman/Orci
 Kut Productions
 Kuzui Enterprises
-L'Institut Polare FranÁais Paul-…mile Victor
+L'Institut Polare Fran√ßais Paul-√âmile Victor
 L.I.F.T. Production
 LA Publicity
 LB Productions
@@ -2482,7 +2482,7 @@ LIFE(n).
 LOVEFiLM International
 LStar Capital
 LTB Films Limited
-La Classe AmÈricaine
+La Classe Am√©ricaine
 La Fabrique de Films
 La Parti Productions
 La Pasionaria S.r.l.
@@ -2527,14 +2527,14 @@ Lazio Film Commission
 Le Grisbi Productions
 Le Pacte
 Le Studio Canal+
-Le Tax Shelter du Gouvernement FÈdÈral de Belgique
+Le Tax Shelter du Gouvernement F√©d√©ral de Belgique
 LeBrocquy Fraser Productions
 LeVision Pictures
 Lee Daniels Entertainment
 Left Bank Pictures
 Left Field Ventures
 Left Tackle Pictures
-Lefwander Kapitalfˆrvaltning AB
+Lefwander Kapitalf√∂rvaltning AB
 Legend3D
 Legendary Entertainment
 Legendary Pictures
@@ -2546,8 +2546,8 @@ Lenfilm Studio
 Lennox House Films
 Lereby Productions
 Les Armateurs
-Les CinÈmas de la Zone
-Les Editions Albert RenÈ
+Les Cin√©mas de la Zone
+Les Editions Albert Ren√©
 Les Films 21
 Les Films Alain Sarde
 Les Films Alyne
@@ -2560,10 +2560,10 @@ Les Films du Jeudi
 Les Films du Losange
 Les Films du Parc
 Les Films du Poisson
-Les Productions Artistes AssociÈs
-Les Productions de la GuÈville
+Les Productions Artistes Associ√©s
+Les Productions de la Gu√©ville
 Les Productions du Chicon
-Les Productions du TrÈsor
+Les Productions du Tr√©sor
 Les films du Worso
 Leuviah Films
 Level 1 Entertainment
@@ -2659,7 +2659,7 @@ Lucky Red
 Ludlum Entertainment
 Lumiere
 Lumiere Motion Picture Company
-LumiËre Pictures
+Lumi√®re Pictures
 Luna Pictures
 Lunar Films
 Lunar Industries
@@ -2667,7 +2667,7 @@ Luxembourg Film Fund
 Lynch Siderow Productions
 Lynda Obst Productions
 Lyrick Studios
-LÈgende Entreprises
+L√©gende Entreprises
 M Productions
 M.G. Films
 M6
@@ -2853,7 +2853,7 @@ Media Rights Capital (MRC).
 Mediana Productions Filmgesellschaft
 Mediapro
 Mediaset
-Mediaset EspaÒa
+Mediaset Espa√±a
 Mediastream Dritte Film GmbH & Co. Beteiligungs KG
 Mediastream Film GmbH & Co. Productions KG
 Mediastream Vierte Film GmbH & Co. Vermarktungs KG
@@ -2927,11 +2927,11 @@ Mindshare Media
 Ming Productions
 Ministerio de Cultura
 Ministry of Culture of the Slovak Republic
-MinistËre Libanais de la Culture
-MinistËre de la Culture et de la Communication
-MinistËre des Affaires EtrangËres et EuropÈennes
-MinistËre des Affaires ÈtrangËres et du DÈveloppement International
-MinistËre du DÈveloppement Durable et de la Mer
+Minist√®re Libanais de la Culture
+Minist√®re de la Culture et de la Communication
+Minist√®re des Affaires Etrang√®res et Europ√©ennes
+Minist√®re des Affaires √©trang√®res et du D√©veloppement International
+Minist√®re du D√©veloppement Durable et de la Mer
 Minotaur Film Partnership No. 3
 Mirabai Films
 Miracle Entertainment
@@ -2946,7 +2946,7 @@ Mirisch Pictures
 Misha Films
 Misher Films
 Mitsubishi
-Mitteldeutsche Medienfˆrderung (MDM).
+Mitteldeutsche Medienf√∂rderung (MDM).
 Mobra Films
 Mockingbird Pictures
 Moctesuma Esparza Productions
@@ -3182,7 +3182,7 @@ Nostromo Pictures
 Nothing But a Man Company
 Notting Hill Pictures
 Noujaim Films
-Nouvelles …ditions de Films (NEF).
+Nouvelles √âditions de Films (NEF).
 Novaya Zemlya
 Novo Arturo Films
 Novo RPI
@@ -3263,7 +3263,7 @@ Opperman Viner Chrystyn Entertainment
 Optional Pictures
 Opus Film
 Opus Pictures
-Orange CinÈma SÈries
+Orange Cin√©ma S√©ries
 Orange Studios
 Oregon Film Factory
 Oren Peli / Brian Witten Pictures
@@ -3318,7 +3318,7 @@ Pacifica Film
 Paco Cinematografica
 Pain Unlimited GmbH Filmproduktion
 Palace Pictures
-Palatine …toile 12
+Palatine √âtoile 12
 Pale Morning Dun
 Palladium Film
 Palladium Productions
@@ -3394,12 +3394,12 @@ Patalex V Productions Limited
 Patchwork Productions
 Pathe
 Pathe Productions
-PathÈ
-PathÈ Distribution
-PathÈ Films
-PathÈ Pictures International
-PathÈ Renn Productions
-PathÈ!
+Path√©
+Path√© Distribution
+Path√© Films
+Path√© Pictures International
+Path√© Renn Productions
+Path√©!
 Patrick Aiello Productions
 Patriot Pictures
 Paul Schiff Productions
@@ -3553,7 +3553,7 @@ Production Champion
 Production One
 Produzioni Associate Delphos
 Produzioni Europee Associati (PEA).
-Programme MEDIA de la CommunautÈ EuropÈenne
+Programme MEDIA de la Communaut√© Europ√©enne
 Progres Film Distribution
 Prommitr International Production
 Prone Gunman
@@ -3596,7 +3596,7 @@ Qian Yian International
 Quad Productions
 Quality Films Entertainment
 Quality Growth International Ltd.
-Quanta Centro de ProduÁıes Cinematogr·ficas
+Quanta Centro de Produ√ß√µes Cinematogr√°ficas
 Quantum Entertainment
 Quarante 12 Films
 Quick Draw Productions
@@ -3605,8 +3605,8 @@ Quickfire Films
 Quincy Jones-David Salzman Entertainment
 Quinta Communications
 Quite Quick Productions
-Quo Vadis CinÈma
-QuÈbec Production Services Tax Credit
+Quo Vadis Cin√©ma
+Qu√©bec Production Services Tax Credit
 Qwerty Films
 R&C Produzioni
 R.P. Productions
@@ -3631,7 +3631,7 @@ Radiant Film GmbH
 Radiant Productions
 Radical Media
 Radical Studios
-Radio TelefÌs …ireann (RT…).
+Radio Telef√≠s √âireann (RT√â).
 Radius-TWC
 Rafran Cinematografica
 Rai Cinema
@@ -3728,7 +3728,7 @@ Rhino Films
 Rhombus Media
 Rhulen Entertainment
 Rhythm and Hues
-RhÙne-Alpes CinÈma
+Rh√¥ne-Alpes Cin√©ma
 Rice Films
 Richard Williams Productions
 Riche Productions
@@ -3766,7 +3766,7 @@ Rockaway the Movie
 Rocking Chair Productions
 Rocklin / Faust
 Rocklock Films
-Rodar y Rodar Cine y TelevisiÛn
+Rodar y Rodar Cine y Televisi√≥n
 Rodin Entertainment
 Rodriguez International Pictures
 Roger Birnbaum Productions
@@ -3814,13 +3814,13 @@ Russian Roulette Ltd.
 Ryan Murphy Productions
 Rye Road Productions
 Rysher Entertainment
-RÈgion Basse-Normandie
-RÈgion Bretagne
-RÈgion Ile-de-France
-RÈgion Nord-Pas-de-Calais
-RÈgion Poitou-Charentes
-RÈgion Provence CÙte d'Azur
-RÈgion Wallone
+R√©gion Basse-Normandie
+R√©gion Bretagne
+R√©gion Ile-de-France
+R√©gion Nord-Pas-de-Calais
+R√©gion Poitou-Charentes
+R√©gion Provence C√¥te d'Azur
+R√©gion Wallone
 S & L Films
 S E Productions Inc.
 S.O.A.F. Productions
@@ -3874,7 +3874,7 @@ Sanctum Australia
 Sandcastle 5 Productions
 Sandline Production
 Sandrew Metronome Denmark
-Santa FÈ Films
+Santa F√© Films
 Saracen Films
 Sarah Green Film
 Saturn Films
@@ -4069,19 +4069,19 @@ Sobini Films
 Sobras International Pictures
 Sociedad General de Cine S.A.
 Society Entertainment
-SociÈtÈ Radio-Canada
-SociÈtÈ de DÈveloppement des Entreprises Culturelles (SODEC).
-SociÈtÈ des Producteurs de L'Angoa
+Soci√©t√© Radio-Canada
+Soci√©t√© de D√©veloppement des Entreprises Culturelles (SODEC).
+Soci√©t√© des Producteurs de L'Angoa
 Sodium Fox
-SofiTVCinÈ
+SofiTVCin√©
 Sofica Europacorp
 Sofica Sofinergie 5
 Sofica UGC 1
 Soficapital
-SoficinÈma
-SoficinÈma 2
-SoficinÈma 5
-SoficinÈma 6
+Soficin√©ma
+Soficin√©ma 2
+Soficin√©ma 5
+Soficin√©ma 6
 Sogecine
 Sogepaq
 Soho VFX
@@ -4210,7 +4210,7 @@ Stuber/Parent
 Studio 18
 Studio 37
 Studio 407
-Studio 4∞C
+Studio 4¬∞C
 Studio Babelsberg
 Studio Babelsberg Motion Pictures
 Studio Babelsberg StudioBabelsberg Motion Pictures
@@ -4221,8 +4221,8 @@ Studio Hamburg International Production (SHIP).
 Studio Hamburg WorldWide Pictures
 StudioCanal
 Studiopolis
-St·tnÌ Fond CR pro Podporu a Rozvoj CeskÈ Kinematografie
-StÈphan Films
+St√°tn√≠ Fond CR pro Podporu a Rozvoj Cesk√© Kinematografie
+St√©phan Films
 Submarine Entertainment Distributors
 Substanz Film
 Subterranean Productions LLC
@@ -4280,7 +4280,7 @@ Synchronistic Pictures
 Syncopy
 Syndicate Films International
 Synthesis Entertainment
-S¸ddeutscher Rundfunk
+S√ºddeutscher Rundfunk
 T-Series
 T-Street Productions
 T.H.E. Films
@@ -4361,23 +4361,23 @@ Tee Rob Pictures
 Teen Life Productions
 Teeth
 Teitler Film
-Tele M¸nchen Fernseh Produktionsgesellschaft (TMG).
+Tele M√ºnchen Fernseh Produktionsgesellschaft (TMG).
 Tele+
 Telecinco
 Telecinco Cinema
 Teleclub AG
 Telefilm Canada
 Telefilm Canada - Equity Investment Program
-TelefÛnica Producciones
-TelefÛnica Studios
+Telef√≥nica Producciones
+Telef√≥nica Studios
 Telekanal STS
 Telepool
 Televisa S.A. de C.V.
-TelevisiÛ de Catalunya (TV3).
-TelevisiÛ de Catalunya TV3
-TelevisiÛn EspaÒola (TVE).
-TelevisiÛn Federal (Telefe).
-TelevisiÛn de Galicia (TVG). S.A.
+Televisi√≥ de Catalunya (TV3).
+Televisi√≥ de Catalunya TV3
+Televisi√≥n Espa√±ola (TVE).
+Televisi√≥n Federal (Telefe).
+Televisi√≥n de Galicia (TVG). S.A.
 Televizija Slovenija
 Televiziunea Romana (TVR1).
 Telewizja Polska (TVP).
@@ -4569,7 +4569,7 @@ Trap-Two-Zero Productions
 Traveling Film Productions
 Traveling Picture Show Company (TPSC).
 Traverse Media
-Tre V‰nner Produktion AB
+Tre V√§nner Produktion AB
 Treasure Company
 Tree Line Films
 Treehouse Pictures
@@ -4634,8 +4634,8 @@ Two Streets Entertainment
 Two Ton Films
 Tyler Perry Company, The
 Type A Films
-TÈlÈfilm Canada
-TÈlÈvision Suisse-Romande (TSR).
+T√©l√©film Canada
+T√©l√©vision Suisse-Romande (TSR).
 U-Drive Productions
 U.K. Tax Credit
 UGC PH
@@ -4664,8 +4664,8 @@ Unfinished Films
 UniCredit Group
 Unification Church
 Unified Pictures
-Union GÈnÈrale CinÈmatographique
-Union GÈnÈrale CinÈmatographique (UGC).
+Union G√©n√©rale Cin√©matographique
+Union G√©n√©rale Cin√©matographique (UGC).
 Union Investment Partners
 Unique Features
 Unit Four
@@ -4723,7 +4723,7 @@ Velocity Productions
 Velvet Steamroller Entertainment
 Vendian Entertainment
 Vendome Pictures
-VendÙme Production
+Vend√¥me Production
 Vengeance Productions Pty. Ltd.
 Vengeance is Mine Productions
 Ventanarosa Productions
@@ -4732,7 +4732,7 @@ Veracity Productions
 Verdi Productions
 Verisimilitude
 Versus Entertainment
-Vers·til Cinema
+Vers√°til Cinema
 Vertigo Entertainment
 Vertigo Films
 Vertigo Productions
@@ -4787,7 +4787,7 @@ Votiv Films
 Vox3 Films
 Vrijzinnig Protestantse Radio Omroep (VPRO).
 Vulcan Productions Inc.
-VÌa Digital
+V√≠a Digital
 W9
 WCG Entertainment Productions
 WDR
@@ -4821,7 +4821,7 @@ Walt Disney Television Animation
 Walt deFaria
 Walter Shenson Films
 Walwa Films S.A.
-Wanda VisiÛn S.A.
+Wanda Visi√≥n S.A.
 Wardour Street Pictures
 Wark Producing Corp.
 Warner Animation Group
@@ -4832,7 +4832,7 @@ Warner Bros. Family Entertainment
 Warner Bros. Feature Animation
 Warner Bros. Home Video
 Warner Bros. Pictures
-Warner Bros. Pictures de EspaÒa
+Warner Bros. Pictures de Espa√±a
 Warner Brothers/Seven Arts
 Warner China Film HG Corporation
 Warner Independent Pictures (WIP).
@@ -4924,8 +4924,8 @@ Worldview Entertainment
 Worldwide Media
 Woss Group Film Productions
 Wrecking Crew
-W¸ste Film Ost
-W¸ste Filmproduktion
+W√ºste Film Ost
+W√ºste Filmproduktion
 X-Filme Creative Pool
 X3 Canada Productions
 X3US Productions
@@ -4968,13 +4968,13 @@ Zanuck Company, The
 Zanuck Independent
 Zanuck/Brown Productions
 Zapruder Films
-Zazen ProduÁıes
+Zazen Produ√ß√µes
 Zehnte Babelsberg
 Zeke Productions
 Zelko Films
 Zenith Entertainment
 Zentropa Entertainments
-Zentropa International Kˆln
+Zentropa International K√∂ln
 Zentropa International Sweden
 Zephyr Films
 Zero Fiction Film
@@ -5013,5 +5013,5 @@ unafilm
 verture Films
 warner bross Turkey
 winchester films
-¡frica Filmes
-÷sterreichischer Rundfunk (ORF).
+√Åfrica Filmes
+√ñsterreichischer Rundfunk (ORF).

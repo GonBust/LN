@@ -60,7 +60,7 @@ production_country
 release_date
 release_date
 revenue
-overview
+revenue
 runtime
 runtime
 vote_avg
