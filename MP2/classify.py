@@ -84,7 +84,7 @@ _knqslist2 = [x.strip() for x in _knqslist]
 #Guarda todas as questões com as stopwords removidas. Tokeniza as frases resultantes.
 fNewQs = open(new_q).read()
 newQstk = nltk.sent_tokenize(fNewQs)
-newQstk_worked_on = [remove_stop_words(replace_with_word(replace_with_word(replace_with_word(sentence, _movieslist, 'movie_title'), _peoplelist, 'person'), _characterlist, 'character')) for sentence in newQstk]
+newQstk_worked_on = [remove_stop_words(replace_with_word(replace_with_word(replace_with_word(sentence, _movieslist, 'movie_title'), _peoplelist, 'person_name'), _characterlist, 'movie_character')) for sentence in newQstk]
 
 ##Guarda e tokeniza os resultados
 #fNewQsResult = open(new_q_res).read()
@@ -96,7 +96,7 @@ newQstk_worked_on = [remove_stop_words(replace_with_word(replace_with_word(repla
 train_data = []
 for x in _knqslist:
     tag, q = x.split(' \t')
-    q = remove_stop_words(replace_with_word(replace_with_word(replace_with_word(re.sub(' \n','',q), _movieslist, 'movie_title'), _peoplelist, 'person'), _characterlist, 'character'))
+    q = remove_stop_words(replace_with_word(replace_with_word(replace_with_word(re.sub(' \n','',q), _movieslist, 'movie_title'), _peoplelist, 'person_name'), _characterlist, 'movie_character'))
     train_data.append((q,tag))
 
 #Cada palavra em todas as questões é transformada em minúscula e cada questão tokenizada.
