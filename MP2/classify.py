@@ -43,7 +43,6 @@ known_q = str(sys.argv[1])
 new_q = str(sys.argv[2])
 rec_list_movies = rec_folder / 'list_movies.txt'
 rec_list_people = rec_folder / 'list_people.txt'
-rec_list_people = rec_folder / 'list_characters.txt'
 
 ######### FUNCOES DE SUPORTE #########
 #Remove todas as stopwords de um dado argumento
@@ -68,13 +67,9 @@ with open(rec_list_movies) as f:
     _movieslist = f.readlines()
 _movieslist = [x.strip() for x in _movieslist]
 
-with open(rec_list_movies) as f:
+with open(rec_list_people) as f:
     _peoplelist = f.readlines()
 _peoplelist = [x.strip() for x in _peoplelist]
-
-with open(rec_list_movies) as f:
-    _characterlist = f.readlines()
-_characterlist = [x.strip() for x in _characterlist]
 
 #Lê todas as linhas do ficheiro "QuestoesConhecidas" e guarda-as numas lista. Em seguida separa os elementos por \n (linha)
 with open(known_q) as f:
@@ -84,19 +79,24 @@ _knqslist2 = [x.strip() for x in _knqslist]
 #Guarda todas as questões com as stopwords removidas. Tokeniza as frases resultantes.
 fNewQs = open(new_q).read()
 newQstk = nltk.sent_tokenize(fNewQs)
-newQstk_worked_on = [remove_stop_words(replace_with_word(replace_with_word(replace_with_word(sentence, _movieslist, 'movie_title'), _peoplelist, 'person_name'), _characterlist, 'movie_character')) for sentence in newQstk]
+newQstk = [replace_with_word(sentence, _movieslist, 'movie_title') for sentence in newQstk]
+newQstk = [replace_with_word(sentence, _peoplelist, 'person_name') for sentence in newQstk]
+newQstk = [remove_stop_words(sentence) for sentence in newQstk]
 
 ##Guarda e tokeniza os resultados
 #fNewQsResult = open(new_q_res).read()
 #newQstkRes = nltk.word_tokenize(fNewQsResult)
 
+#Imprime apenas os resultados um por linha
+for i in range(0, len(newQstk)):
+    print(f'{i + 1} {newQstk[i]}')
 ######### TRAIN AND TEST SET #########
 #Cria tuplos com os 2 elementos de cada linha, separados por " \t". Em seguida esses elementos são adicionados a uma lista
 #com a estrutura adequada para treino ('pergunta','tag'). Às perguntas são removidas as stop words. 
 train_data = []
 for x in _knqslist:
     tag, q = x.split(' \t')
-    q = remove_stop_words(replace_with_word(replace_with_word(replace_with_word(re.sub(' \n','',q), _movieslist, 'movie_title'), _peoplelist, 'person_name'), _characterlist, 'movie_character'))
+    q = remove_stop_words(replace_with_word(re.sub(' \n','',q), _movieslist, 'movie_title'))
     train_data.append((q,tag))
 
 #Cada palavra em todas as questões é transformada em minúscula e cada questão tokenizada.
@@ -112,7 +112,7 @@ voted_classifer = VoteClassifier(LRclassif, SGDCclassif, LSVCclassif)
 
 #Usando o classificador, classifica as novas questões
 results = []
-for x in newQstk_worked_on:
+for x in newQstk:
     x_features = {word.lower(): (word in word_tokenize(x.lower())) for word in all_words}
     results.append(voted_classifer.classify(x_features))
     #print(voted_classifer.confidence(x_features))
